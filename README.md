@@ -1,7 +1,7 @@
 # Timer Stopwatch App
 
 This is a simple iOS app with stopwatch and timer functionality. App written in Swift & UIKit 100% programmatic UI (No Storyboard).
-![](https://giphy.com/embed/akFQdwTLarbPiwJMu3)
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjQ3ODQ4YmE1ZDQzNTdjNTJmMjJmODVjM2U2NTFmMDk5N2QxNDA4YSZjdD1n/akFQdwTLarbPiwJMu3/giphy.gif)
 
 ##   Features
 -   Stopwatch and timer functionality to measure elapsed time or to set a countdown timer.
