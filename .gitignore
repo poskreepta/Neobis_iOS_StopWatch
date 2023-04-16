@@ -1,0 +1,18 @@
+# Xcode
+#
+.DS_Store
+build/
+DerivedData/
+
+# CocoaPods
+#
+Pods/
+*.lock
+
+# Carthage
+#
+Carthage/Build
+
+# Swift Package Manager
+#
+.build/

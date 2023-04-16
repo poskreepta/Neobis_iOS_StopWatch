@@ -13,6 +13,8 @@
 		CE7FAF8829DF15C700E4EB4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF8629DF15C700E4EB4D /* Main.storyboard */; };
 		CE7FAF8A29DF15C900E4EB4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF8929DF15C900E4EB4D /* Assets.xcassets */; };
 		CE7FAF8D29DF15C900E4EB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF8B29DF15C900E4EB4D /* LaunchScreen.storyboard */; };
+		CE7FAF9529E5A82600E4EB4D /* TimerStopwatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAF9429E5A82600E4EB4D /* TimerStopwatchModel.swift */; };
+		CE7FAF9729E999D800E4EB4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAF9629E999D800E4EB4D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		CE7FAF8929DF15C900E4EB4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7FAF8C29DF15C900E4EB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7FAF8E29DF15C900E4EB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7FAF9429E5A82600E4EB4D /* TimerStopwatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStopwatchModel.swift; sourceTree = "<group>"; };
+		CE7FAF9629E999D800E4EB4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CECBB0FA29EC64C9009446E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 		CE7FAF7429DF15C700E4EB4D = {
 			isa = PBXGroup;
 			children = (
+				CECBB0FA29EC64C9009446E2 /* README.md */,
 				CE7FAF7F29DF15C700E4EB4D /* StopWatch */,
 				CE7FAF7E29DF15C700E4EB4D /* Products */,
 			);
@@ -58,7 +64,9 @@
 			children = (
 				CE7FAF8029DF15C700E4EB4D /* AppDelegate.swift */,
 				CE7FAF8229DF15C700E4EB4D /* SceneDelegate.swift */,
+				CE7FAF9429E5A82600E4EB4D /* TimerStopwatchModel.swift */,
 				CE7FAF8429DF15C700E4EB4D /* ViewController.swift */,
+				CE7FAF9629E999D800E4EB4D /* Constants.swift */,
 				CE7FAF8629DF15C700E4EB4D /* Main.storyboard */,
 				CE7FAF8929DF15C900E4EB4D /* Assets.xcassets */,
 				CE7FAF8B29DF15C900E4EB4D /* LaunchScreen.storyboard */,
@@ -138,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7FAF9729E999D800E4EB4D /* Constants.swift in Sources */,
 				CE7FAF8529DF15C700E4EB4D /* ViewController.swift in Sources */,
 				CE7FAF8129DF15C700E4EB4D /* AppDelegate.swift in Sources */,
 				CE7FAF8329DF15C700E4EB4D /* SceneDelegate.swift in Sources */,
+				CE7FAF9529E5A82600E4EB4D /* TimerStopwatchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
