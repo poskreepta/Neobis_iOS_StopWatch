@@ -9,13 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let imageLogo: UIImageView = {
+    private let imageTimerLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "timer")
         imageView.tintColor = .black
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    private let imageStopwatchLogo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "stopwatch")
+        imageView.tintColor = .black
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     
     private let timerStopwatchLabel: UILabel = {
         let label = UILabel()
@@ -108,9 +117,9 @@ class ViewController: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if traitCollection.verticalSizeClass == .compact {
-            imageLogo.isHidden = true
+            imageTimerLogo.isHidden = true
         } else {
-            imageLogo.isHidden = false
+            imageTimerLogo.isHidden = false
         }
     }
     
@@ -119,7 +128,8 @@ class ViewController: UIViewController {
     
     func setupViews() {
         view.backgroundColor = UIColor(red: 255/255, green: 204/255, blue: 2/255, alpha: 1)
-        view.addSubview(imageLogo)
+        view.addSubview(imageTimerLogo)
+        view.addSubview(imageStopwatchLogo)
         
         //        SegmentedContorol view setup
         view.addSubview(timerSegmentedControl)
@@ -149,9 +159,13 @@ class ViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             stopwatchPicker.isHidden = true
+            imageStopwatchLogo.isHidden = true
+            imageTimerLogo.isHidden = false
             stopButtonTapped()
         case 1:
             stopwatchPicker.isHidden = false
+            imageTimerLogo.isHidden = true
+            imageStopwatchLogo.isHidden = false
             stopButtonTapped()
             
         default:
@@ -232,13 +246,18 @@ class ViewController: UIViewController {
     
     //MARK: - Set Up Constraints
     func setupConstraints() {
-        NSLayoutConstraint.activate([imageLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                                     imageLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height * 0.03),
-                                     imageLogo.heightAnchor.constraint(equalToConstant: 70),
-                                     imageLogo.widthAnchor.constraint(equalToConstant: 70)])
+        NSLayoutConstraint.activate([imageTimerLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                                     imageTimerLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height * 0.03),
+                                     imageTimerLogo.heightAnchor.constraint(equalToConstant: 70),
+                                     imageTimerLogo.widthAnchor.constraint(equalToConstant: 70)])
+        
+        NSLayoutConstraint.activate([imageStopwatchLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                                     imageStopwatchLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: view.frame.height * 0.03),
+                                     imageStopwatchLogo.heightAnchor.constraint(equalToConstant: 70),
+                                     imageStopwatchLogo.widthAnchor.constraint(equalToConstant: 70)])
         
         NSLayoutConstraint.activate([timerSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                                     timerSegmentedControl.topAnchor.constraint(equalToSystemSpacingBelow: imageLogo.bottomAnchor, multiplier: 2),
+                                     timerSegmentedControl.topAnchor.constraint(equalToSystemSpacingBelow: imageTimerLogo.bottomAnchor, multiplier: 2),
                                      timerSegmentedControl.heightAnchor.constraint(equalToConstant: 30),
                                      timerSegmentedControl.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5)])
         

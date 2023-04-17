@@ -27,12 +27,7 @@ struct TimerStopwatchModel {
         let minutes = (seconds % 3600) / 60
         let seconds = (seconds % 3600) % 60
     
-        var timeString = ""
-        timeString += String(format: "%02d", hours)
-        timeString += ":"
-        timeString += String(format: "%02d", minutes)
-        timeString += ":"
-        timeString += String(format: "%02d", seconds)
+        let timeString = makeTimeString(hours: hours, minutes: minutes, seconds: seconds)
         return timeString
     }
 
@@ -42,12 +37,7 @@ struct TimerStopwatchModel {
     
     func makeTimeString(hours: Int, minutes: Int, seconds: Int ) -> String {
         
-        var timeString = ""
-        timeString += String(format: "%02d", hours)
-        timeString += ":"
-        timeString += String(format: "%02d", minutes)
-        timeString += ":"
-        timeString += String(format: "%02d", seconds)
+        var timeString = String(format: "%02i:%02i:%02i", hours, minutes, seconds)
         return timeString
         
     }
